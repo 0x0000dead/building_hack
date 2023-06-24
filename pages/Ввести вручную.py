@@ -83,11 +83,11 @@ if st.button('Предсказать'):
     
     # append to dataframe
     # add y_pred col to the beginning of the dataframe
-    y_pred = str(np.random.randint(1, 31)) + "." + np.random.randint(1, 12) + "." + "2023"
+    y_pred = str(np.random.randint(1, 31)) + "." + str(np.random.randint(1, 12)) + "." + "2023"
     # write text Ожидаемое время
 
     # increase text size
-    st.markdown(f'<p style="font-size: 20px;font-color: red">Ожидаемое время окончания строительства составит <u>{str(y_pred[0])[:6]}</u> ч.</p>', unsafe_allow_html=True)
+    st.markdown(f'<p style="font-size: 20px;font-color: red">Ожидаемое время окончания строительства составит <u>{str(y_pred)}</u> ч.</p>', unsafe_allow_html=True)
     #df.insert(0, 'y', y_pred)
     # st.write(df)
     # st.table(pd.DataFrame(df))
