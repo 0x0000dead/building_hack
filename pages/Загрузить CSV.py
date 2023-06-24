@@ -25,7 +25,7 @@ def plotly_to_pdf(fig, filename):
 # if mode is csv
 # add file uploader
 file1 = st.file_uploader('', type='csv')
-file2 = st.file_uploader('', type='csv')
+file2 = st.file_uploader('additional data', type='csv')
 if file1 is not None and file2 is not None:
     df_base = pd.read_csv(file1)
     df_add = pd.read_csv(file2)
