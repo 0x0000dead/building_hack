@@ -47,7 +47,7 @@ if file1 is not None and file2 is not None:
     if ab[1].button('Предсказать 👌👌'):
         # model = Predicter()
         #y_pred = abs(model.predict(df,df_add))
-        #y_pred = str(np.random.randint(1, 31)) + "." + np.random.randint(1, 12) + "." + "2023"
+        #y_pred = str(np.random.randint(1, 31)) + "." + str(np.random.randint(1, 12)) + "." + "2023"
 
         #df.insert(0, 'y', y_pred)
         # st.write(df)
@@ -70,7 +70,7 @@ if file1 is not None and file2 is not None:
             mime='text/csv',
         )
         # save to csv
-        df.to_csv('/app/wagon-hackaton/final/tmp.csv', index=False)
+        df.to_csv('/app/building_hack/final/tmp.csv', index=False)
         url = '/Показать_интерпретируемость'
         ab[2].markdown(f'''
         <a href="{url}"><button style="background-color:#FF7314; color:White; font-size: 20px; border-radius: 5px; border: 1px solid #FF7314; padding: -10px 11px; text-align: left; text-decoration: none; display: inline-block; margin: 0px -50px; cursor: pointer;">Показать интерпретируемость</button></a>
