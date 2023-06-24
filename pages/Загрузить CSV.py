@@ -65,7 +65,7 @@ if file1 is not None and file2 is not None:
         </style>""", unsafe_allow_html=True)
         ab[0].download_button(
             label="Скачать предсказанные времена",
-            data=pd.DataFrame(df).to_csv(index=False),
+            data=pd.DataFrame(df_base).to_csv(index=False),
             file_name='large_df.csv',
             mime='text/csv',
         )
