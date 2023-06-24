@@ -83,7 +83,7 @@ if st.button('Предсказать'):
     
     # append to dataframe
     # add y_pred col to the beginning of the dataframe
-    y_pred = [np.random.randint(1, 100) for i in range(len(df))]
+    y_pred = str(np.random.randint(1, 31)) + "." + np.random.randint(1, 12) + "." + "2023"
     # write text Ожидаемое время
 
     # increase text size

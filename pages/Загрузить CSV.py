@@ -47,7 +47,8 @@ if file1 is not None and file2 is not None:
     if ab[1].button('Предсказать 👌👌'):
         # model = Predicter()
         #y_pred = abs(model.predict(df,df_add))
-        y_pred = [np.random.randint(1, 100) for i in range(len(df))]
+        y_pred = str(np.random.randint(1, 31)) + "." + np.random.randint(1, 12) + "." + "2023"
+
         #df.insert(0, 'y', y_pred)
         # st.write(df)
         ab = st.columns([2, 1, 1])
