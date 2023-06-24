@@ -11,8 +11,6 @@ st.set_page_config(initial_sidebar_state="collapsed")
 st.markdown("Загрузить CSV файл")
 st.sidebar.markdown("# Загрузить CSV файл")
 
-add_bg_from_local('/app/wagon-hackaton/final/1693new.png')
-
 st.columns(2)
 st.columns(2)
 st.columns(2)
@@ -47,10 +45,10 @@ if file1 is not None and file2 is not None:
 
     ab = st.columns([2, 1, 2])
     if ab[1].button('Предсказать 👌👌'):
-        model = Predicter()
+        # model = Predicter()
         #y_pred = abs(model.predict(df,df_add))
         y_pred = [np.random.randint(1, 100) for i in range(len(df))]
-        df.insert(0, 'y', y_pred)
+        #df.insert(0, 'y', y_pred)
         # st.write(df)
         ab = st.columns([2, 1, 1])
         am = st.markdown("""
