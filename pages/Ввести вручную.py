@@ -18,6 +18,14 @@ p {
 """,
     unsafe_allow_html=True,
 )
+st.columns(2)
+st.columns(2)
+st.columns(2)
+st.columns(2)
+st.columns(2)
+st.columns(2)
+st.columns(2)
+st.columns(2)
 
 # create manual input with layout
 row = st.columns(7)
