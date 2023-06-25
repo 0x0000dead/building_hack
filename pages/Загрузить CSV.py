@@ -66,11 +66,11 @@ if file1 is not None and file2 is not None:
         ab[0].download_button(
             label="Скачать предсказанные времена",
             data=pd.DataFrame(df_base).to_csv(index=False),
-            file_name='large_df.csv',
+            file_name='tmp.csv',
             mime='text/csv',
         )
         # save to csv
-        df.to_csv('/app/building_hack/final/tmp.csv', index=False)
+        #df.to_csv('/app/building_hack/final/tmp.csv', index=False)
         url = '/Показать_интерпретируемость'
         ab[2].markdown(f'''
         <a href="{url}"><button style="background-color:#FF7314; color:White; font-size: 20px; border-radius: 5px; border: 1px solid #FF7314; padding: -10px 11px; text-align: left; text-decoration: none; display: inline-block; margin: 0px -50px; cursor: pointer;">Показать интерпретируемость</button></a>

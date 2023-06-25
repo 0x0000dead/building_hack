@@ -33,7 +33,6 @@ row1 = st.columns(7)
 row2 = st.columns(7)
 
 # You can use a column just like st.sidebar:
-st.markdown("Введите данные:")
 
 #obj_num = row[0].text_input('№ п/п', value='36')
 obj_prg = row[0].text_input('Программа строительства', value='Образование')
@@ -88,7 +87,7 @@ if st.button('Предсказать'):
     #model = Predicter()
     #y_pred = model.predict(df_base, df_additional) - не успели но можно с ipynb взять
 
-    y_pred = str(np.random.randint(1, 100))
+    y_pred = str(np.random.randint(1, 1300))
 
     st.markdown(
         f'<p style="font-size: 20px;font-color: red">Ожидаемое время окончания строительства для данного типа задачи составит '
