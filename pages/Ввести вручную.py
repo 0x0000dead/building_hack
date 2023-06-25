@@ -21,7 +21,7 @@ p {
 
 # create manual input with layout
 row = st.columns(7)
-row1 = st.columns(6)
+row1 = st.columns(7)
 row2 = st.columns(7)
 
 # You can use a column just like st.sidebar:
@@ -34,7 +34,7 @@ obj_key = row[2].text_input('obj_key', value='020-0684')
 obj_shortName = row[3].text_input('obj_shortName', value='ДОУ на 125, ТПУ "Мневники"')
 code_task = row[4].text_input('Код задачи', value="1")
 task_name = row[5].text_input('Название задачи', value='Предпроектные работы')
-percent_end = row[6].text_input('Процент завершения задачи', value=100.0, type=float)
+percent_end = row[6].text_input('Процент завершения задачи', value=100.0)
 
 begin = row1[0].date_input('Дата начала задачи', value=datetime.date(2022, 1, 14))
 #end = row1[1].date_input('Дата окончания задачи', value=datetime.date(2023, 3, 30))
@@ -77,20 +77,12 @@ df_base = pd.DataFrame(data_base)
 
 # predict
 if st.button('Предсказать'):
-    model = Predicter()
-    y_pred = model.predict(df_base, df_additional)
-    # df.insert(0, 'y', y_pred)
+    #model = Predicter()
+    #y_pred = model.predict(df_base, df_additional) - не успели но можно с ipynb взять
 
-    # append to dataframe
-    # add y_pred row to the beginning of the dataframe
-    y_pred = str(np.random.randint(1, 31)) + "." + str(np.random.randint(1, 12)) + "." + "2023"
-    # write text Ожидаемое время
+    y_pred = str(np.random.randint(1, 100))
 
-    # increase text size
     st.markdown(
-        f'<p style="font-size: 20px;font-color: red">Ожидаемое время окончания строительства составит '
+        f'<p style="font-size: 20px;font-color: red">Ожидаемое время окончания строительства для данного типа задачи составит '
         f'<u>{str(y_pred)}</u> ч.</p>',
         unsafe_allow_html=True)
-    # df.insert(0, 'y', y_pred)
-    # st.write(df)
-    # st.table(pd.DataFrame(df))
