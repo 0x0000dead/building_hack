@@ -51,10 +51,10 @@ status_sq = row1[6].selectbox('состояние площадки', ["Своб�
                                                      "Передана под снос (для объектов сноса)",
                                                      "Не передана под снос (для объектов сноса)",
                                                      "-"], index=2)
-square = row2[0].text_input('Площадь', value=0.0, type=float)
-genproectir = row2[1].text_input('Генпроектировщик', value=1, type=int)
-genpodryad = row2[2].text_input('Генподрядчик', value=2, type=int)
-workers_number = row2[3].text_input('Кол-во рабочих', value=271.0, type=int)
+square = row2[0].text_input('Площадь', value=0.0)
+genproectir = row2[1].text_input('Генпроектировщик', value=1)
+genpodryad = row2[2].text_input('Генподрядчик', value=2)
+workers_number = row2[3].text_input('Кол-во рабочих', value=271.0)
 date_rep = row2[4].date_input('date_report', value=datetime.date(2023, 1, 20))
 
 # create dataframe
