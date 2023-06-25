@@ -59,13 +59,13 @@ date_rep = row2[4].date_input('date_report', value=datetime.date(2023, 1, 20))
 
 # create dataframe
 #fact_time = (end.timestamp() - begin.timestamp()) / 60 / 60 / 24
-plan_time = (end_bp.timestamp() - begin_bp.timestamp()) / 60 / 60 / 24
+#plan_time = (end_bp.timestamp() - begin_bp.timestamp()) / 60 / 60 / 24
 
 data_base = {'obj_prg': [obj_prg],
              'obj_subprg': [obj_subprg],
              'состояние площадки': [status_sq],
              'ПроцентЗавершенияЗадачи': [percent_end],
-             'plan_time': [plan_time],
+             'plan_time': ["1"],
              'Площадь': [square],
              'Генпроектировщик': [genproectir],
              'Генподрядчик': [genpodryad],
